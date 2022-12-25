@@ -12,7 +12,7 @@ else
 {
   while (numA <= -1000 || numA >= 1000)
   {
-    numA /= 10;
+    numA /= 10; // numA = numA / 10
   }  
   int numB = numA % 10;
   Console.WriteLine($"Третья цифра -> {numB}");
