@@ -4,12 +4,16 @@
 Console.Write("Введите трехзначное число: ");
 int numA = Convert.ToInt32(Console.ReadLine());
 
-if (numA%1000 >= 100)
+if (numA > -100 && numA < 100)
 {
-    int numB = numA%10;
-    Console.WriteLine($"Третье число введенного ранее трехзначного числа равняется: {numB}");  
+    Console.WriteLine($"Третьей цифры во введенном числе {numA} нет");  
 }
 else
 {
-  Console.WriteLine($"Третьей цифры во введенном числе {numA} нет");  
+  while (numA <= -1000 || numA >= 1000)
+  {
+    numA /= 10;
+  }  
+  int numB = numA % 10;
+  Console.WriteLine($"Третья цифра -> {numB}");
 }
